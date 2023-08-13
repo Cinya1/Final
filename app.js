@@ -27,7 +27,7 @@ function mostrar (array){
          <p>Origen: ${array[i].origin.name}</p>
          <p>Locación: ${array[i].location.name}</p>
         </div>
-        <div class="enlace"> <a href="">Ver más</a>
+        <div class="enlace"> <a href="">Ver más</paraa>
         </div>
 
     </div>`
@@ -88,10 +88,13 @@ function todos (){
  }
  $todosB.addEventListener('click',todos)
 
- function siguientePaguina (){
+ function siguientePagina (){
+    if(pagina===42){
+        return
+    }
     pagina++;
-    if(pagina===1){
-       $anteriorB.disabled = true
+    if(pagina===2){
+       $anteriorB.disabled = false
     } else if(pagina===42){
         $siguienteB.disabled = true;
     } else
@@ -100,25 +103,28 @@ function todos (){
     } 
     usarFetch(pagina);
     }
- $siguienteB.addEventListener('click',siguientePaguina)
+ $siguienteB.addEventListener('click',siguientePagina)
 
- function anteriorPaguina (){
+ function anteriorPagina (){
+    if (pagina===1){
+        return
+    }
     pagina--;
-    if(pagina===42){
-        $anteriorB.disabled = false
-    } else if(pagina===1){
-        $anteriorB.disabled = false;
+    console.log(pagina)
+   if(pagina===1){
+        $anteriorB.disabled = true;
     } else
     {
-        $anteriorB.disabled = true
+        $anteriorB.disabled = false;
     } 
     usarFetch(pagina);
     }
-$anteriorB.addEventListener('click',anteriorPaguina)
+$anteriorB.addEventListener('click',anteriorPagina)
 
  function ultimaPagina (){
     pagina=42;
     $siguienteB.disabled = true
+    $anteriorB.disabled=false
     usarFetch(pagina);
     }
     
@@ -127,6 +133,7 @@ $ultimaPaginaB.addEventListener('click',ultimaPagina)
 function primerBoton(){
     pagina=1
     $anteriorB.disabled = true
+    $siguienteB.disabled = false
     usarFetch(primerBoton)
     }   
     
