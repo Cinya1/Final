@@ -5,7 +5,7 @@ let $hombresB = document.getElementById('hombres')
 let $todosB = document.getElementById('todos')
 //paginas
 let $siguienteB = document.getElementById('siguiente')
-let $ultimaPaginaB = document.getElementById('ultimaPaguina')
+let $ultimaPaginaB = document.getElementById('ultimaPagina')
 let $anteriorB = document.getElementById('anterior')
 let $primerBoton = document.getElementById('primerBoton')
 
@@ -117,19 +117,18 @@ function todos (){
 $anteriorB.addEventListener('click',anteriorPaguina)
 
  function ultimaPagina (){
-    if(pagina===42){
-      $siguienteB.disabled = true
-    }
+    pagina=42;
+    $siguienteB.disabled = true
     usarFetch(pagina);
- };
+    }
+    
 $ultimaPaginaB.addEventListener('click',ultimaPagina)
 
 function primerBoton(){
-    if(pagina===1){
+    pagina=1
     $anteriorB.disabled = true
-    }
-    usarFetch(pagina)
+    usarFetch(primerBoton)
+    }   
     
-}
 $primerBoton.addEventListener('click',primerBoton)
 //  llamar al botoon y conectarlo $ultimaPaginaB.addEventListener('click',42)
