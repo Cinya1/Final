@@ -62,17 +62,16 @@ img{
 main {
   display: flex;
 }
-.enlace{
- position: relative;
- top: 50%;
- margin: 20px;
- padding: 15px;
-}
-a{
+.enlace,a{
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 1.2rem;
   color:rgb(167, 10, 167);
+ /* position: relative; */
+ /* top: 50%; */
+ /* margin: 20px;
+ padding: 15px; */
 }
+
 
 #primerBoton, #anterior, #siguiente, #ultimaPagina{
     background-color: rgb(164, 163, 165);

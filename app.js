@@ -27,7 +27,9 @@ function mostrar (array){
          <p>Origen: ${array[i].origin.name}</p>
          <p>Locación: ${array[i].location.name}</p>
         </div>
-        <div class="enlace"> <a href="">Ver más</paraa>
+        <br> <br>
+        <div class="enlace"> <a href="">Ver más...</paraa>
+        <a id 
         </div>
 
     </div>`
