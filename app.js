@@ -114,8 +114,7 @@ function todos (){
     pagina--;
     if(pagina===41){
         $siguienteB.disabled = false;
-     } else 
-   if(pagina===1){
+     } else if(pagina===1){
         $anteriorB.disabled = true;
     } else
     {
@@ -138,7 +137,7 @@ function primerBoton(){
     pagina=1;
     $anteriorB.disabled = true
     $siguienteB.disabled = false
-    usarFetch(primerBoton)
+    usarFetch(pagina)
     }   
     
 $primerBoton.addEventListener('click',primerBoton)
