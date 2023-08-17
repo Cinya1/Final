@@ -96,12 +96,12 @@ function todos (){
     }
     pagina++;
     if(pagina===2){
-       $anteriorB.disabled = false
+       $anteriorB.disabled = false;
     } else if(pagina===42){
         $siguienteB.disabled = true;
     } else
     {
-        $siguienteB.disabled = false
+        $siguienteB.disabled = false;
     } 
     usarFetch(pagina);
     }
@@ -112,7 +112,9 @@ function todos (){
         return
     }
     pagina--;
-    console.log(pagina)
+    if(pagina===41){
+        $siguienteB.disabled = false;
+     } else 
    if(pagina===1){
         $anteriorB.disabled = true;
     } else
@@ -133,7 +135,7 @@ $anteriorB.addEventListener('click',anteriorPagina)
 $ultimaPaginaB.addEventListener('click',ultimaPagina)
 
 function primerBoton(){
-    pagina=1
+    pagina=1;
     $anteriorB.disabled = true
     $siguienteB.disabled = false
     usarFetch(primerBoton)
